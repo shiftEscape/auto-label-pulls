@@ -31,7 +31,7 @@ jobs:
     steps:
       ...
       - name: Assign labels based on target branch
-        uses: shiftEscape/auto-label-pr@v1.0.0
+        uses: shiftEscape/auto-label-pulls@v1.0.0
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           config-path: ".github/config/branch-labels.json"
