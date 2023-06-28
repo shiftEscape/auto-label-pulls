@@ -25,16 +25,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Assign labels based on target branch
         uses: shiftEscape/branch-based-labeler@v1
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: ".github/labeler-config.yml" # configuration file
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: ".github/config/branch-based-labeler.yml" # configuration file
 ```
 
 ## Configuration
 
-You can configure this by creating a configuration file (like `.github/labeler-config.yml`) in your repository. In this file, you define the labels that should be added to pull requests for each branch. Here's a sample configuration:
+You can configure this by creating a configuration file (like `.github/config/branch-based-labeler.yml`) in your repository. In this file, you define the labels that should be added to pull requests for each branch. Here's a sample configuration:
 
 ```yaml
 master:
