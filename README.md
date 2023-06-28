@@ -13,7 +13,7 @@
 To use, you'll need to add it as a step in your GitHub workflow file i.e (`.github/workflows/main.yml`), providing the necessary inputs.
 
 ```yaml
-name: Assign Labels
+name: Workflow Name
 
 on:
   pull_request:
@@ -23,17 +23,15 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
+      ...
       - name: Assign labels based on target branch
         uses: shiftEscape/auto-label-pr@v1.0.0
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
-          config-path: ".github/config/branch-labels.json" # JSON config file
+          config-path: ".github/config/branch-labels.json"
 ```
 
-> NOTE: Use this action only for **`*pull_request`** event of type **`opened`**.
+> NOTE: Use this action only for **`pull_request`** event of type **`opened`**.
 
 ## Configuration
 
