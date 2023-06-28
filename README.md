@@ -1,4 +1,4 @@
-# Branch-Based Labeler
+# Auto-Label PR (Pull Request)
 
 ⚡️🔖 Automates the process of assigning labels to your pull requests based on the target branch. This action simplifies your project management by automatically categorizing your PRs, enabling you to filter and review them more efficiently.
 
