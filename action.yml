@@ -1,5 +1,5 @@
-name: "AutoLabelPR"
-description: "Automated Labeling for Pull Requests based on the target branch"
+name: "auto-label-pulls"
+description: "Automated labeling for Pull Requests based on the target branch"
 author: shiftEscape
 branding:
   icon: "tag"
