@@ -4,9 +4,11 @@
 
 ## Features
 
-- Automatic Label Assignment: Labels are automatically assigned to new pull requests based on the target branch, removing the need for manual labelling.
-- Customizable: You can configure which labels correspond to which branches, allowing you to use in a way that suits your project's needs.
-- Easy to Integrate: Simply add this action to your repository's workflow and it will start working immediately.
+- `Automatic Label Assignment`: Labels are automatically assigned to new pull requests based on the target branch, removing the need for manual labelling.
+
+- `Customizable`: You can configure which labels correspond to which branches, allowing you to use in a way that suits your project's needs.
+
+- `Easy to Integrate`: Simply add this action to your repository's workflow and it will start working immediately.
 
 ## Usage
 
