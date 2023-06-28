@@ -1,4 +1,4 @@
-name: "auto-label-pulls"
+name: "Auto Label Pulls"
 description: "Automated labeling for Pull Requests based on the target branch"
 author: shiftEscape
 branding:

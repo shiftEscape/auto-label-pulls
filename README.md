@@ -1,6 +1,6 @@
-# Auto-Label Pulls
+# Auto Label Pull Requests
 
-⚡️🔖 Automates the process of assigning label to your **`Pull Requests`** based on a `target branch`. This action simplifies your project management by automatically categorizing your PRs, enabling you to filter and review them more efficiently.
+⚡️🔖 Automates the process of assigning label to your **`Pull Requests`** based on a **`target branch`**. This action simplifies your project management by automatically categorizing your PRs, enabling you to filter and review them more efficiently.
 
 ## Features
 
