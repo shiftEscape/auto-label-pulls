@@ -1,5 +1,6 @@
 name: "AutoLabelPR"
 description: "Automated Labeling for Pull Requests based on the target branch"
+author: shiftEscape
 branding:
   icon: "tag"
   color: "purple"
