@@ -1,5 +1,9 @@
 # Auto Label Pull Requests
 
+[![License](https://img.shields.io/github/license/shiftEscape/auto-label-pulls?cacheSeconds=0)](https://github.com/shiftEscape/auto-label-pulls/blob/main/LICENSE)
+[![Issues](https://img.shields.io/github/issues/shiftEscape/auto-label-pulls)](https://github.com/shiftEscape/auto-label-pulls/issues)
+[![Stars](https://img.shields.io/github/stars/shiftEscape/auto-label-pulls)](https://github.com/shiftEscape/auto-label-pulls/stargazers)
+
 ⚡️🔖 Automates the process of assigning label to your **`Pull Requests`** based on a **`target branch`**. This action simplifies your project management by automatically categorizing your PRs, enabling you to filter and review them more efficiently.
 
 ## Features
