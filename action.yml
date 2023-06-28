@@ -8,7 +8,7 @@ inputs:
   token:
     description: "Access token with restrictive `repo` permissions"
     required: true
-  config-file-path:
+  config-path:
     description: "Path of JSON file containing branch names and their corresponding labels"
     required: true
 
@@ -30,7 +30,7 @@ runs:
       shell: bash
       run: |
         # Start here
-        CONFIGURATION_PATH="${{ inputs.config-file-path }}"
+        CONFIGURATION_PATH="${{ inputs.config-path }}"
 
         # Check if the configuration file exists
         if [ ! -f $CONFIGURATION_PATH ]; then

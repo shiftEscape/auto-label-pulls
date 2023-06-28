@@ -1,6 +1,6 @@
 # Branch-Based Labeler
 
-A GitHub action that automates the process of assigning labels to your pull requests based on the target branch. This action simplifies your project management by automatically categorizing your PRs, enabling you to filter and review them more efficiently.
+⚡️🔖 Automates the process of assigning labels to your pull requests based on the target branch. This action simplifies your project management by automatically categorizing your PRs, enabling you to filter and review them more efficiently.
 
 ## Features
 
@@ -17,7 +17,7 @@ name: Assign Labels
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    types: [opened]
 
 jobs:
   label:
@@ -27,24 +27,24 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Assign labels based on target branch
-        uses: shiftEscape/branch-based-labeler@v1
+        uses: shiftEscape/auto-label-pr@v1.0.0
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: ".github/config/branch-based-labeler.yml" # configuration file
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          config-path: ".github/config/branch-labels.json" # JSON config file
 ```
+
+> NOTE: Use this action only for **`*pull_request`** event of type **`opened`**.
 
 ## Configuration
 
-You can configure this by creating a configuration file (like `.github/config/branch-based-labeler.yml`) in your repository. In this file, you define the labels that should be added to pull requests for each branch. Here's a sample configuration:
+You can configure this by creating a JSON configuration file (i.e `.github/config/branch-labels.json`) in your repository. In this file, you define the labels that should be added to pull requests for each branch. Here's a sample configuration:
 
-```yaml
-master:
-  - label1
-  - label2
-
-develop:
-  - label3
-  - label4
+```json
+{
+  "master": "🚀 Production Deployment",
+  "staging": "🚀 UAT Deployment",
+  "development": "🚀 SIT Deployment"
+}
 ```
 
-In the example above, when a pull request is made to `master`, `label1` and `label2` will be added to the PR. If a PR is made to `develop`, `label3` and `label4` will be added.
+In the example above, when a `Pull Request` is made to `master`, `🚀 Production Deployment` label will be assigned to that PR and so on and so forth.
