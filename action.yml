@@ -19,11 +19,11 @@ runs:
     - name: Checkout latest code
       uses: actions/checkout@v2
 
-    - name: Verify Event and Action
-      if: ${{ github.event_name != 'pull_request' || github.event.action != 'opened' }}
+    - name: Verify Event, Action and Author
+      if: ${{ github.event_name != 'pull_request' || github.event.action != 'opened' || github.actor == 'dependabot[bot]' }}
       shell: bash
       run: |
-        echo "Event is not a 'pull request' of type 'opened'. Exiting the workflow."
+        echo "Event is not a 'pull request' of type 'opened' or author is 'dependabot'. Exiting the workflow."
         exit 1
 
     - name: Validate and Parse Config File
