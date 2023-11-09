@@ -24,7 +24,7 @@ runs:
       shell: bash
       run: |
         echo "Event is not a 'pull request' of type 'opened' or author is 'dependabot'. Exiting the workflow."
-        exit 1
+        exit 0
 
     - name: Validate and Parse Config File
       id: validate-and-parse
